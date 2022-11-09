@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/filtered_screen.dart';
 import './screens/meal_details_screen.dart';
 import './screens/tabs_scree.dart';
 import 'screens/category_meals_screen.dart';
@@ -9,7 +10,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen()
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FilteredScreen.routeName: (ctx) => FilteredScreen(),
       },
       onGenerateRoute: (settings) {
         //when we have made navigation but that rout does not exist in upper routes{} block
